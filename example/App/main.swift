@@ -43,6 +43,10 @@ let workDir: String?
 */
 let drop = Droplet(workDir: workDir, providers: [mustache])
 
+drop.get("hello") { request in
+    return "Hello, world!"
+}
+
 /**
     Vapor configuration files are located
     in the root directory of the project
